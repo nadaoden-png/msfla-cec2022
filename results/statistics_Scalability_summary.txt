@@ -1,0 +1,82 @@
+================================================================================
+สรุปสถิติสมบูรณ์ Scalability Analysis -- MSFLA Paper
+================================================================================
+
+### Shapiro-Wilk Normality Test ###
+62/100 (62.0%) เป็น Normal -> ใช้ non-parametric tests
+
+### Friedman Test ###
+
+--- D=10 ---
+  sphere      : chi2= 118.507  p=0.000000  [sig.]
+  ackley      : chi2= 118.797  p=0.000000  [sig.]
+  rastrigin   : chi2=  76.375  p=0.000000  [sig.]
+  rosenbrock  : chi2= 110.693  p=0.000000  [sig.]
+  schwefel    : chi2=  98.587  p=0.000000  [sig.]
+
+--- D=30 ---
+  sphere      : chi2= 120.000  p=0.000000  [sig.]
+  ackley      : chi2= 100.763  p=0.000000  [sig.]
+  rastrigin   : chi2= 110.747  p=0.000000  [sig.]
+  rosenbrock  : chi2= 119.227  p=0.000000  [sig.]
+  schwefel    : chi2= 112.933  p=0.000000  [sig.]
+
+--- D=50 ---
+  sphere      : chi2= 111.120  p=0.000000  [sig.]
+  ackley      : chi2= 111.920  p=0.000000  [sig.]
+  rastrigin   : chi2= 112.373  p=0.000000  [sig.]
+  rosenbrock  : chi2=  99.440  p=0.000000  [sig.]
+  schwefel    : chi2= 114.240  p=0.000000  [sig.]
+
+--- D=100 ---
+  sphere      : chi2= 104.880  p=0.000000  [sig.]
+  ackley      : chi2= 118.507  p=0.000000  [sig.]
+  rastrigin   : chi2= 112.507  p=0.000000  [sig.]
+  rosenbrock  : chi2=  60.453  p=0.000000  [sig.]
+  schwefel    : chi2= 114.667  p=0.000000  [sig.]
+
+สรุป: 20/20 มีนัยสำคัญทางสถิติ
+
+### Wilcoxon + Holm's Correction: MSFLA vs each ###
+
+--- D=10 ---
+  sphere      : SFLA:W PSO:L GA:W DE:L 
+  ackley      : SFLA:W PSO:L GA:W DE:L 
+  rastrigin   : SFLA:W PSO:= GA:L DE:L 
+  rosenbrock  : SFLA:W PSO:L GA:L DE:L 
+  schwefel    : SFLA:W PSO:= GA:L DE:L 
+
+--- D=30 ---
+  sphere      : SFLA:W PSO:L GA:W DE:L 
+  ackley      : SFLA:W PSO:W GA:= DE:L 
+  rastrigin   : SFLA:W PSO:W GA:L DE:L 
+  rosenbrock  : SFLA:W PSO:L GA:L DE:L 
+  schwefel    : SFLA:W PSO:= GA:L DE:L 
+
+--- D=50 ---
+  sphere      : SFLA:W PSO:L GA:W DE:L 
+  ackley      : SFLA:W PSO:W GA:L DE:L 
+  rastrigin   : SFLA:W PSO:W GA:L DE:L 
+  rosenbrock  : SFLA:W PSO:L GA:= DE:L 
+  schwefel    : SFLA:W PSO:= GA:L DE:L 
+
+--- D=100 ---
+  sphere      : SFLA:W PSO:W GA:L DE:L 
+  ackley      : SFLA:W PSO:W GA:L DE:L 
+  rastrigin   : SFLA:W PSO:W GA:L DE:= 
+  rosenbrock  : SFLA:W PSO:L GA:= DE:L 
+  schwefel    : SFLA:W PSO:W GA:L DE:L 
+
+================================================================================
+สรุปผลรวม: MSFLA ชนะกี่ครั้ง (จาก 20 ฟังก์ชัน x มิติ)
+================================================================================
+MSFLA vs SFLA: ชนะ 20/20
+MSFLA vs PSO: ชนะ 8/20
+MSFLA vs GA: ชนะ 4/20
+MSFLA vs DE: ชนะ 0/20
+
+### สรุปรวมทั้งเปเปอร์ (MSFLA vs SFLA) ###
+CEC2022 D=10: 12/12
+CEC2022 D=20: 12/12
+Scalability (4 dims): 20/20
+รวมทั้งหมด: 44/44 (100%)

@@ -1,0 +1,79 @@
+================================================================================
+สรุปสถิติสมบูรณ์ D=20 -- MSFLA Paper
+================================================================================
+
+### Shapiro-Wilk Normality Test ###
+22/60 กลุ่ม (36.7%) เป็น Normal -> ใช้ non-parametric tests
+
+### Friedman Test (ต่อฟังก์ชัน) ###
+F 1: chi2= 117.562  p=0.000000  [sig.]
+F 2: chi2=  92.187  p=0.000000  [sig.]
+F 3: chi2= 114.320  p=0.000000  [sig.]
+F 4: chi2=  90.053  p=0.000000  [sig.]
+F 5: chi2= 114.640  p=0.000000  [sig.]
+F 6: chi2=  82.613  p=0.000000  [sig.]
+F 7: chi2=  91.680  p=0.000000  [sig.]
+F 8: chi2=  82.213  p=0.000000  [sig.]
+F 9: chi2= 111.920  p=0.000000  [sig.]
+F10: chi2=  76.453  p=0.000000  [sig.]
+F11: chi2=  77.298  p=0.000000  [sig.]
+F12: chi2= 105.200  p=0.000000  [sig.]
+
+### Wilcoxon + Holm's Correction: MSFLA vs each ###
+
+### สรุปผลรวม: MSFLA ชนะอย่างมีนัยสำคัญกี่ฟังก์ชัน (จาก 12) ###
+MSFLA vs SFLA: ชนะ 12/12
+MSFLA vs PSO: ชนะ 7/12
+MSFLA vs GA: ชนะ 4/12
+MSFLA vs DE: ชนะ 1/12
+
+### ตารางละเอียด p-values ###
+Func  vs           p-value    Sig?   MSFLA Wins?
+F1    SFLA        0.000000     Yes           Yes
+F1    PSO         0.000000     Yes            No
+F1    GA          0.000000     Yes           Yes
+F1    DE          0.000000     Yes            No
+F2    SFLA        0.000000     Yes           Yes
+F2    PSO         0.073244      No            No
+F2    GA          0.000002     Yes            No
+F2    DE          0.000000     Yes            No
+F3    SFLA        0.000000     Yes           Yes
+F3    PSO         0.100397      No            No
+F3    GA          0.000000     Yes            No
+F3    DE          0.000000     Yes            No
+F4    SFLA        0.000000     Yes           Yes
+F4    PSO         0.000000     Yes           Yes
+F4    GA          0.005383     Yes            No
+F4    DE          0.000001     Yes            No
+F5    SFLA        0.000000     Yes           Yes
+F5    PSO         0.000002     Yes           Yes
+F5    GA          0.000000     Yes            No
+F5    DE          0.000000     Yes            No
+F6    SFLA        0.000000     Yes           Yes
+F6    PSO         0.000209     Yes           Yes
+F6    GA          0.001457     Yes           Yes
+F6    DE          0.036435     Yes           Yes
+F7    SFLA        0.000000     Yes           Yes
+F7    PSO         0.000232     Yes           Yes
+F7    GA          0.001864     Yes            No
+F7    DE          0.000000     Yes            No
+F8    SFLA        0.000000     Yes           Yes
+F8    PSO         0.000137     Yes           Yes
+F8    GA          0.000000     Yes            No
+F8    DE          0.000000     Yes            No
+F9    SFLA        0.000000     Yes           Yes
+F9    PSO         0.745655      No            No
+F9    GA          0.000000     Yes            No
+F9    DE          0.000000     Yes            No
+F10   SFLA        0.000000     Yes           Yes
+F10   PSO         0.000000     Yes           Yes
+F10   GA          0.001864     Yes           Yes
+F10   DE          0.280087      No            No
+F11   SFLA        0.000000     Yes           Yes
+F11   PSO         0.000123     Yes           Yes
+F11   GA          0.007612     Yes           Yes
+F11   DE          0.792159      No            No
+F12   SFLA        0.000000     Yes           Yes
+F12   PSO         0.091950      No            No
+F12   GA          0.000000     Yes            No
+F12   DE          0.000001     Yes            No
